@@ -2,12 +2,20 @@
 <html>
 <head>
   <title>Newapp</title>
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <%= image_tag("Untitled.jpg", :class => "main-image", :height => "20%", :width => "20%", :align => "left", :margin => "2%") %>
+  <h1>Amber Mulholland Coding Emporium</hi>
+  <h2>Code of all sorts and sizes!</h2>
+  
 <%= yield %>
 
 </body>
