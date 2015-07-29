@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Newapp</title>
+  <title>Amber Mulholland | Newapp</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
@@ -11,12 +11,44 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <%= image_tag("Untitled.jpg", :class => "main-image", :height => "20%", :width => "20%", :align => "left", :margin => "2%") %>
-  <h1>Amber Mulholland Coding Emporium</hi>
-  <h2>Code of all sorts and sizes!</h2>
   
-<%= yield %>
+  <body>
+    <!--Navigation Bar --> 
+    <nav>
+      <div class = "navbar navbar-header navbar-inverse navbar-fixed-top" role = "navigation">
+        <div class = "container-fluid">
+          <div class = "project">
+            <a href= "#">Amber Mulholland</a>
+          </div>
+          <div class = "navbar-header" id="heading">
+            <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
+              <span class = "sr-only"> Toggle Navigation</span>
+              <span class = "icon-bar"></span>
+              <span class = "icon-bar"></span>
+              <span class = "icon-bar"></span>
+            </button>
 
-</body>
+            <div class = "navbar-collapse navbar-header collapse">
+              <ul class = "nav navbar-nav">
+                <li><a href = "#" style="text-decoration:none;">Home</a></li>
+                <li><%= link_to "About", "#"%></li>
+                <li><a href = "#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>  
+     </nav> 
+    <!--Main Content-->  
+    <div class = "main_section">
+      <div class = "product_image">
+        <%= image_tag("heroimage.jpg", :class => "main-image",  :width => "100%", ) %>
+      </div>  
+      <div class = "shop_header">
+        <h1>Amber Mulholland Coding Emporium</h1>
+        <h2>Code of all sorts and sizes!</h2>
+      </div>  
+    </div>
+    <%= yield %> 
+  </body>    
 </html>
