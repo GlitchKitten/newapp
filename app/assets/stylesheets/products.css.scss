@@ -1,3 +1,30 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  width: 100%;
+}
+
+tr {
+	display: block-inline;
+}
+
+th {
+  text-align: center;
+  font-size: 2em;
+  display: block-inline;
+  line-height: 1.2em;
+}
+
+#womens_label {
+	background-color: pink;
+}
+
+#accessories_label {
+	background-color: EEFDAB;
+}
+
+#mens_label{
+	background-color: #CEF8E7;
+}

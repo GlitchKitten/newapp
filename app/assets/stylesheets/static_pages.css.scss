@@ -5,7 +5,7 @@
 body{
 	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 	text-align: center;
-  background-color: black;
+  margin-top: 20px;
 }
 
 /*Nav Bar*/
@@ -15,6 +15,7 @@ body{
   color: #FF3399;
 	padding: 1em 1em .5em 1em;
   text-decoration:none;
+  display: none;
 }
 
 .navbar-header {
@@ -43,12 +44,9 @@ body{
 
 /*Main Content */
 
-.main_section{ 
-  padding-top: 10px;
-}
+
 .shop_header {
-  background-color: #C0FFFC;
-  padding: 2%;
+  padding: .5%;
 }
 
 .page_info {
@@ -56,17 +54,8 @@ body{
 }
 
 h1 {
-  font-size: 3em;
-  text-transform: uppercase;
-	padding: 2% 2% 0 2%;
+  font-size: 1.5em;
   color: white;
-  font-weight: bold;
-}
-
-h2 {
-	font-size: 2em;
-	color: grey; 
-	padding: 1% 2% 2% 2%;
 }
 
 p {

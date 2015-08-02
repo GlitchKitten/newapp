@@ -33,6 +33,7 @@
                 <li><a href = "#" style="text-decoration:none;">Home</a></li>
                 <li><%= link_to "About", "#"%></li>
                 <li><a href = "#">Contact</a></li>
+                <li><a href = "#" style="text-decoration:none;">Products</a></li>
               </ul>
             </div>
           </div>
@@ -42,11 +43,10 @@
     <!--Main Content-->  
     <div class = "main_section">
       <div class = "product_image">
-        <%= image_tag("heroimage.jpg", :class => "main-image",  :width => "100%", ) %>
+        <%= image_tag("litotehero.jpg", :class => "main-image",  :width => "100%") %>
       </div>  
       <div class = "shop_header">
-        <h1>Amber Mulholland Coding Emporium</h1>
-        <h2>Code of all sorts and sizes!</h2>
+       <!--empty div class for later insertion of subheading-->
       </div>  
     </div>
     <%= yield %> 
