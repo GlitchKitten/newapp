@@ -5,15 +5,17 @@
     <tr>
       <th><%= image_tag("denimcamerasmall.jpg", :class => "product-image", :width => "100%") %></th> 
       <th id = "womens_label">Women's Clothing</th>
-      <col-span ="2"> 
+      <th>Description</th>
     </tr>
     <tr>
       <th id = "accessories_label">Accessories</th>
       <th><%= image_tag("boots.jpg", :class => "product-image", :width => "100%") %></th>
+      <th>Description</th>
     </tr>
     <tr>
       <th><%= image_tag("pipelakesmall.jpg", :class => "product-image",:width => "100%") %></th>
       <th id = "mens_label">Men's Clothing</th>
+      <th>Description</th>
     </tr>
   </thead>
   
@@ -33,3 +35,4 @@
 
 <br>
 
+<%= link_to 'New Product', new_product_path %>
