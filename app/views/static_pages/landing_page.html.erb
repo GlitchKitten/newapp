@@ -1,5 +1,4 @@
-<h2>Featured Product:</h2>
-<%= @featured_product.name %>
+<h2 class = "featured_title">Featured Product:</h2>
 
 <div id = "carousel-example-generic" class = "carousel slide" data-ride = "carousel">
   <!--Indicators-->
@@ -13,22 +12,11 @@
     <div class="carousel-inner" role="listbox">
       <% @featured_product.each do |product| %>
       <div class ="item<%= " active" if product == @featured_product.first %>">
-          <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, :class => "featured_image") %>
           <div class="carousel-caption">
             <%= product.name %>
           </div>
-        </div>  
+      </div>  
       <% end %>
-                
-  
-      <!--Controls-->
-      <a class = "left-carousel-control" href="#carousel-example-generic" role ="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>     
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class = "right-carousel-control" href="#carousel-example-generic" role ="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>        
-        <span class="sr-only">Next</span>
-      </a>
     </div>  
 </div>        
