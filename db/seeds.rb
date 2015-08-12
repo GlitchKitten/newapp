@@ -5,6 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-5.times do |i|
-  Product.create(name: "Product ##{i}", description: "A product.")
-end
+
+Product.create([{name: 'Denim Shirt', description: 'Comfy shirt for walks in the woods and nights by the fire', image_url: 'denimcamerasmall.jpg'}])
