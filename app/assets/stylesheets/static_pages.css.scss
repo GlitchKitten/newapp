@@ -6,6 +6,7 @@ body{
 	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 	text-align: center;
   margin-top: 20px;
+  background-color: #E8E7E7;
 }
 
 /*Nav Bar*/
@@ -63,4 +64,20 @@ h4 {
 .about_blurb{
   padding: 1%;
   font-size: 1.5em;
+}
+
+/*Carousel on landing page */
+.featured_image {
+  width: 90%;
+  margin: auto;
+}
+
+.carousel-caption {
+  font-size: 2em;
+  margin-bottom: 2%;
+}
+
+.featured_title {
+  font-size: 2em;
+  padding-bottom: 2%;
 }

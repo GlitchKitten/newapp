@@ -15,7 +15,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
+        <td><%= (image_tag(product.image_url)) %></td>
         <td><%= product.colour %></td>
         <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
