@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :products
+   
+  get 'products/index'
   
   get 'static_pages/about'
 
@@ -7,13 +8,12 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-  get 'products/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#landing_page'
+  root 'static_pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -63,5 +63,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :products
   resources :orders, only: [:index, :show, :new, :create]
 end
