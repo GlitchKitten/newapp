@@ -56,8 +56,7 @@ class ProductsController < ApplicationController
   
   def destroy 
     Product.find(params[:id]).destroy 
-    flash[:info] = "Event deleted" 
-    redirect_to :back
+    redirect_to products_index_path
   end
  
 
