@@ -7,8 +7,8 @@
 
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
   
@@ -30,10 +30,10 @@
 
             <div class = "navbar-collapse navbar-header collapse">
               <ul class = "nav navbar-nav">
-                <li><a href = "https://amulhollandapp.herokuapp.com" style="text-decoration:none;">Home</a></li>
-                <li><a href = "https://amulhollandapp.herokuapp.com/static_pages/about">About</a></li>
-                <li><a href = "https://amulhollandapp.herokuapp.com/static_pages/contact">Contact</a></li>
-                <li><a href = "https://amulhollandapp.herokuapp.com/products" style="text-decoration:none;">Products</a></li>
+                <li><%= link_to "Home", static_pages_index_path %></li>
+                <li><%= link_to "About", static_pages_about_path %></li>
+                <li><%= link_to "Contact", static_pages_contact_path %></li>
+                <li><%= link_to "Products", products_index_path %></li>
               </ul>
             </div>
           </div>
