@@ -56,7 +56,7 @@ class ProductsController < ApplicationController
   
   def destroy 
     Product.find(params[:id]).destroy 
-    redirect_to products_index_path
+    redirect_to :back
   end
  
 
