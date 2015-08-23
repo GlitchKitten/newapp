@@ -35,10 +35,10 @@
                 <li><%= link_to "Contact", static_pages_contact_path %></li>
                 <li><%= link_to "Products", static_pages_landing_page_path %></li>
                 <li> 
-                  <%= form_tag("/products", method: "get") do %>
-                    <%= label_tag(:q, "Search:") %>
-                    <%= text_field_tag(:q) %>
-                    <%= submit_tag("Search") %>
+                  <%= form_tag("/products", method: "get", id: "search_form") do %>
+                    <%= label_tag(:q, "Search:", :id => "search_label") %>
+                    <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
+                    <%= submit_tag("Search", id: "search_button") %>
                   <% end %>
                 </li>  
               </ul>

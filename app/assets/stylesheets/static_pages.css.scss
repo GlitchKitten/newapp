@@ -24,7 +24,19 @@ body{
   text-transform: uppercase;
 	letter-spacing: .05em;
 	font-weight: 700;
-	color: white;
+}
+
+.navbar-header #search_bar {
+  color:grey;
+  text-transform: uppercase;
+}
+
+#search_form {
+  padding: 1em 1em .5em 1em;
+}
+
+#search_label {
+  color: white;
 }
 
 .navbar .nav > li > a {
