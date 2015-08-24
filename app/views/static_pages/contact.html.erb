@@ -1,21 +1,51 @@
-<div class = "header">
-  <h1>Want to Say Hi?</h1>
-</div>  
-      
-<div class="contacts">
+<div class = "contact-block col-lg-4 col-md-4 col-sm-xs-12">
+  <h1> WANT TO SAY HI?</h1>
+  <div class = "contacts">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md- col-lg-12">
       <h2><span class = "glyphicon glyphicon-earphone"></h2>
       <p>07512345678</p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-12 col-lg-12">
       <h2><span class = "glyphicon glyphicon-envelope"></h2>
       <a href = "mailto:ahaschenburger@gmail.com" style = "text-decoration: none"><p>ahaschenburger@gmail.com</p></a>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-12 col-lg-12">
       <h2><span class = "glyphicon glyphicon-comment"></h2>
       <p>amber.haschenburger </p>
     </div>
   </div>
 </div>
+</div>       
+      
+<div class="contact-form col-lg-8 col-md-8 col-sm-xs-12>
+  <%= form_tag("/contact", id: "contact_form", class: "contact-form") do %>
+    <div class = "form-group">
+      <%= label_tag 'name', "Your name", class: "contact-label" %>
+      <%= text_field_tag "name", nil, class: "form-control" %>
+    </div>
+    <div class = "form-group">
+      <%= label_tag 'phone', 'Phone Number', class: "contact-label" %>
+      <%= number_field_tag 'phone', nil , class: "form-control", min: '10' %>
+    </div>
+    <div class = "form-group">
+      <%= label_tag 'email', 'Email Address', class: "contact-label" %>
+      <%= email_field_tag 'email', nil, class: "form-control" %>
+    </div>
+    <div class = "form-group">
+      <%= text_area_tag 'message', "Leave me a message", class: "form-control contact-form message-box" %>
+      <%= button_tag 'Submit', id: "submit", class: "btn btn-default" %>
+    </div>
+  <% end %> 
+</div>                               
+  
+                                 
+                               
+
+     
+ 
+      
+      
+      
+      
        

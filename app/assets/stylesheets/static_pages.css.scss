@@ -106,3 +106,38 @@ h4 {
   padding: 1%;
   font-size: 1.5em;
 }
+
+/*Contact Form*/
+
+.contact-form {
+  padding-top: 3%;
+}
+.contact-block {
+  padding-top: 3%;
+  weight: 600;
+}
+.form-group {
+  display: inline-block;
+  margin: 2%;
+  width: 80%;  
+}
+
+.form-group button {
+  float: right;
+  margin: 1% 0;
+  font-weight: 600;
+  background-color: #FFFFFF
+}
+
+.contact-label {
+  float: left;
+}
+
+.contacts {
+  padding-bottom: 3%;
+}
+
+.contacts a:hover {
+  color: #FF3399;
+}
+
