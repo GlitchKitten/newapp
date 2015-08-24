@@ -39,6 +39,18 @@ body{
   color: white;
 }
 
+#search_button:hover{
+  color: #FF3399;
+  
+}
+
+#search_button {
+  transition: color 600ms;
+	-webkit-transition: color 600ms;
+	-moz-transition: color 600ms;
+	-o-transition: color 600ms;
+}
+
 .navbar .nav > li > a {
   color: white;
 }
