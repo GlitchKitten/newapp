@@ -33,7 +33,7 @@
       <%= email_field_tag 'email', nil, class: "form-control" %>
     </div>
     <div class = "form-group">
-      <%= text_area_tag 'message', "Leave me a message", class: "form-control contact-form message-box" %>
+      <%= text_area_tag 'message', nil, placeholder: "Leave a message", class: "form-control contact-form message-box" %>
       <%= button_tag 'Submit', id: "submit", class: "btn btn-default" %>
     </div>
   <% end %> 
