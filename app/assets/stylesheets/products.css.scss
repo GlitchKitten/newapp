@@ -3,11 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 table {
-  width: 100%;
+  width: 95%;
+  border: solid;
+  margin: 2% auto;
 }
 
 tr {
 	display: block-inline;
+  border:solid;
 }
 
 th {
@@ -15,5 +18,11 @@ th {
   font-size: 2em;
   display: block-inline;
   line-height: 1.2em;
+  border: solid;
 }
+
+td {
+  border:solid;
+}
+
 
