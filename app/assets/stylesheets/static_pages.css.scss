@@ -24,7 +24,31 @@ body{
   text-transform: uppercase;
 	letter-spacing: .05em;
 	font-weight: 700;
-	color: white;
+}
+
+.navbar-header #search_bar {
+  color:grey;
+  text-transform: uppercase;
+}
+
+#search_form {
+  padding: 1em 1em .5em 1em;
+}
+
+#search_label {
+  color: white;
+}
+
+#search_button:hover{
+  color: #FF3399;
+  
+}
+
+#search_button {
+  transition: color 600ms;
+	-webkit-transition: color 600ms;
+	-moz-transition: color 600ms;
+	-o-transition: color 600ms;
 }
 
 .navbar .nav > li > a {
@@ -82,3 +106,39 @@ h4 {
   padding: 1%;
   font-size: 1.5em;
 }
+
+/*Contact Form*/
+
+.contact-form {
+  padding-top: 3%;
+}
+.contact-block {
+  padding-top: 3%;
+  weight: 600;
+}
+.form-group {
+  display: inline-block;
+  margin: 2%;
+  width: 80%;  
+}
+
+.form-group button {
+  float: right;
+  margin: 1% 0;
+  font-weight: 600;
+  background-color: #FFFFFF
+}
+
+.contact-label {
+  float: left;
+}
+
+.contacts {
+  padding-bottom: 3%;
+}
+
+.contacts a:hover {
+  color: #FF3399;
+}
+
+
