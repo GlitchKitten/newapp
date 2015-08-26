@@ -110,12 +110,16 @@ h4 {
 /*Contact Form*/
 
 .contact-form {
-  padding-top: 3%;
+  padding-top: 2%;
+  display: inline-block;
+  float: left;
 }
+
 .contact-block {
   padding-top: 2%;
   weight: 600;
 }
+
 .form-group {
   display: inline-block;
   margin: 2%;
@@ -132,6 +136,10 @@ h4 {
 
 .contacts a:hover {
   color: #FF3399;
+}
+
+.btn {
+  float: left;
 }
 
 
