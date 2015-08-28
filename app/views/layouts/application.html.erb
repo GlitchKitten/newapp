@@ -37,8 +37,7 @@
                 <li><%= link_to "Products", products_path %></li>
                 <li> 
                   <%= form_tag("/products", method: "get", id: "search_form") do %>
-                    <%= label_tag(:q, "Search:", :id => "search_label") %>
-                    <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
+                  <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
                     <%= submit_tag("Search", id: "search_button") %>
                   <% end %>
                 </li>
