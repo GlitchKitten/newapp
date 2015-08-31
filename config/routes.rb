@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   
   post 'static_pages/thank_you'
   
+  get 'static_pages/account'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
