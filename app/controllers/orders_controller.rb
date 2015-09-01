@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+   
   def index
   end
   
@@ -11,4 +12,6 @@ class OrdersController < ApplicationController
   def create
   end
   
+  private
+    # Use callbacks to share common setup or constraints between actions.  
 end
