@@ -23,6 +23,10 @@
     <%= f.label :email %><br>
     <%= f.email_field :email, class: "form-control devise_form" %>
   </div>
+  <div class="field">
+    <%= f.label :password, "New Password" %><br>
+    <%= f.password_field :password, class: "form-control devise_form" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
