@@ -33,12 +33,6 @@
                 <li><%= link_to "About", static_pages_about_path %></li>
                 <li><%= link_to "Contact", static_pages_contact_path %></li>
                 <li><%= link_to "Products", products_path %></li>
-                <li> 
-                  <%= form_tag("/products", method: "get", id: "search_form") do %>
-                  <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
-                    <%= submit_tag("Search", id: "search_button") %>
-                  <% end %>
-                </li>
                 <li>
                   <% if user_signed_in? %>
                     <li>
@@ -50,6 +44,13 @@
                     </li>
                   <% end %>
                 </li>
+                <li> 
+                  <%= form_tag("/products", method: "get", id: "search_form") do %>
+                    <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
+                    <%= submit_tag("Search", id: "search_button") %>
+                  <% end %>
+                </li> 
+                </br>
               </ul>
             </div>
           </div>

@@ -5,11 +5,19 @@
 body{
 	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 	text-align: center;
-  margin-top: 20px;
-  background-color: #E8E7E7
+  background-color: #E8E7E7;
+  padding-top: 60px;
 }
 
 /*Nav Bar*/
+nav {
+  padding-bottom: 30px;
+}
+
+.product_image {
+  position:relative;
+  bottom: 50px;
+}
 
 .project a {
   float:left;
@@ -40,8 +48,7 @@ body{
 }
 
 #search_button:hover{
-  color: #FF3399;
-  
+  color: #FF3399; 
 }
 
 #search_button {
@@ -67,11 +74,12 @@ body{
 	-o-transition: color 600ms;
 }
 
+
 /*Carousel on landing page */
 .featured_image {
   width: 80%;
   margin: auto;
-  padding-top: 2%;
+  padding: 2%;
 }
 
 .carousel-caption {
@@ -86,8 +94,12 @@ body{
 
 /*Main Content */
 .notice {
-  padding-top: 1%;
-  color: green;
+  color: #FF3399;
+  font-weight: 600;
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  z-index: 1000;
 }
 
 .page_info {

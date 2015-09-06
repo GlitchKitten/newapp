@@ -5,7 +5,7 @@
       <th>User ID</th>
       <th>Product ID</th>
       <th>Total</th>
-      <th colspan="2">Actions</th>
+      <th>Actions</th>
     </tr> 
    <thead> 
   
@@ -16,7 +16,6 @@
         <td><%= order.product_id %></td>
         <td><%= order.total %></td>
         <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'New', new_order_path(order) %></td>
       </tr>
     <% end %>
   </tbody>
