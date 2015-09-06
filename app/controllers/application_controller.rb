@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     end
   
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to :back, :alert => exception.message
+    redirect_to main_app.root_url, :alert => exception.message
   end
 end
 
