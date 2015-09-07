@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url, class: "devise_form" %>
+    <%= f.url_field :image_url, class: "devise_form" %>
   </div>
   <div class = "field">
     <%= f.label :colour %> <br>
@@ -29,11 +29,11 @@
   </div>
   <div class = "field">
     <%= f.label :price %> <br>
-    <%= f.text_field :price, class: "devise_form" %>
+    <%= f.number_field :price, step: ".01", min: "0", class: "devise_form" %>
   </div> 
   <div class = "field">
     <%= f.label :stock %> <br>
-    <%= f.text_field :stock, class: "devise_form" %>
+    <%= f.number_field :stock, step: "1", min: "0", class: "devise_form" %>
   </div> 
   <div class="actions">
     <%= f.submit %>
