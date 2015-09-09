@@ -1,15 +1,14 @@
 <p>
+  <%= image_tag(@product.image_url) %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @product.description %>
-</p>
-
-<p>
-  <%= image_tag(@product.image_url) %>
 </p>
 
 <p> 
@@ -17,18 +16,13 @@
   <%= @product.colour %>
 </p>
 
-<p> 
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-<p> 
-  <strong>Stock:</strong>
-  <%= @product.stock %>
-</p>
+<p>£<%= @product.price %></p>
+
 <p>Average Rating: <div class = "rated" data-score="<%= @product.average_rating %>"></div> </p>
 
-<%= render 'comments/new_comment' %>
 <%= render 'comments/all_comments' %>
+<%= will_paginate @comments, :class => "pagination" %>
+<%= render 'comments/new_comment' %>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<br>
 <%= link_to 'Back', products_path %>

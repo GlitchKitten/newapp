@@ -30,4 +30,32 @@ td {
   margin-right: 8%;
 }
 
+.pagination {
+  cursor: default; 
+  padding-top: 1em;
+}
+
+.pagination a, .pagination span {
+   padding: 0.2em 0.3em; 
+}
+
+.pagination .disabled {
+   color: #aaaaaa; 
+}
+
+.pagination .current {
+   font-weight: bold;
+   background-color: white;
+   display: inline-block;
+   width: 1.4em;
+   height: 1.4em;
+   line-height: 1.5;
+}
+
+.pagination a:hover, .pagination a:focus {
+   text-decoration: underline;
+   background: none;
+   color: black;
+}
+
 
