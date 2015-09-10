@@ -1,4 +1,4 @@
-u=<div class = "product-reviews">
+<div class = "product-reviews">
   <% @comments.each do |comment| %>
     <div class = "row">
       <hr>
@@ -6,5 +6,6 @@ u=<div class = "product-reviews">
       <p><div class = "rated" data-score="<%= comment.rating %>"></div></p>
       <p><%= comment.body %></p>
     </div>
+<%= link_to 'Delete', product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?'} %>
   <% end %>
 </div>
