@@ -7,6 +7,7 @@
       <li><strong>Colour: </strong><%= product.colour %></li>
       <li><strong>$<%= product.price %></strong></li>
       <li><strong>In stock: </strong><%= product.stock %></li>
+      <br>
       <li><%= link_to 'More Detail', product %></li>
       <% if signed_in? && current_user.admin? %>
         <li><%= link_to 'Edit', edit_product_path(product) %></li>
