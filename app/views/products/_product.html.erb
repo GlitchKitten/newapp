@@ -5,16 +5,12 @@
       <li><strong><%= product.name %></strong></li>
       <li><%= product.description %></li>
       <li><strong>Colour: </strong><%= product.colour %></li>
-      <li>$<%= product.price %>, <strong>In stock: </strong><%= product.stock %></li>
+      <li><strong>$<%= product.price %></strong></li>
+      <li><strong>In stock: </strong><%= product.stock %></li>
       <li><%= link_to 'More Detail', product %></li>
       <% if signed_in? && current_user.admin? %>
         <li><%= link_to 'Edit', edit_product_path(product) %></li>
         <li><%= link_to 'Destroy', product, :method => :delete, data: {confirm: "Are you sure you want to delete?"}%></li>
       <% end %>
     </ul>
- 
-  <% if signed_in? && current_user.admin? %>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, :method => :delete, data: {confirm: "Are you sure you want to delete?"}%></td>
-  <% end %>
-  </tr>
+</tr>
