@@ -4,13 +4,11 @@
 
 table {
   width: 95%;
-  border: solid;
   margin: 2% auto;
 }
 
 tr {
 	display: block-inline;
-  border:solid;
 }
 
 th {
@@ -18,11 +16,12 @@ th {
   font-size: 2em;
   display: block-inline;
   line-height: 1.2em;
-  border: solid;
 }
 
 td {
-  border:solid;
+  width: 50%;
+  border: solid;
+  border-width: 2px;
   padding: 2em;
 }
 
