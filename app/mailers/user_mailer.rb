@@ -2,7 +2,7 @@ class UserMailer < ActionMailer::Base
   default from: "ahaschenburger@gmail.com"
   
   def contact_form(email, name, message, phone)
-    @first_name = name
+    @name = name
     @message = message
     @email = email
     @phone = phone

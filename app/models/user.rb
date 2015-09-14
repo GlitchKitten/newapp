@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   after_create :signup_mail
   
   def signup_mail
-    UserMailer.signup_mail(self).deliver
+    User.signup_mail(self.email, self.name).deliver
   end
 end
