@@ -11,10 +11,9 @@ class UserMailer < ActionMailer::Base
       :subject => "A new contact form message from #{name}")
   end
   
-  def signup_mail(user)
+  def welcome_email(user)
     @user = user
-    mail(:from => 'ahaschenburger@gmail.com', 
-      :to => user.email,
-      :subject => "Welcome to Litote Clothing")
+    mail(:to => "#{user.email}", :subject => "Welcome to Litote Clothing")
   end
+  
 end

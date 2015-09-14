@@ -4,9 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :orders
-  after_create :signup_mail
+  after_create :send_welcome_email
   
-  def signup_mail
-    User.signup_mail(self.email, self.name).deliver
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver
   end
 end
+  
+ 
