@@ -13,7 +13,6 @@ class UserMailer < ActionMailer::Base
   
   def welcome_email(user)
     @user = user
-    @name = name
     mail(:to => "#{user.email}", :subject => "Welcome to Litote Clothing")
   end
   

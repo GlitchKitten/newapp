@@ -14,4 +14,8 @@ class StaticPagesController < ApplicationController
     UserMailer.contact_form(@email, @name, @message, @phone).deliver
   end
   
+  def send_welcome_email
+    @name = params[:name]
+  end
+  
 end

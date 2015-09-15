@@ -24,19 +24,19 @@
   <div class = "row contact-form col-lg-9 col-md-8 col-sm-12 col-xs-12"> 
       <div class = "form-group">
         <%= label_tag :name, "Your name", class: "contact-label" %>
-        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: true %>
       </div>
       <div class = "form-group">
         <%= label_tag 'phone', 'Phone Number', class: "contact-label" %>
-        <%= text_field_tag :phone, nil , class: "form-control", placeholder: "Digits, please"%>
+        <%= number_field_tag :phone, nil , class: "form-control", placeholder: "Digits, please"%>
       </div>
       <div class = "form-group">
         <%= label_tag 'email', 'Email Address', class: "contact-label" %>
-        <%= email_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+        <%= email_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: true %>
       </div>
       <div class = "form-group">
         <%= label_tag 'message', 'Message', class: "contact-label" %>
-        <%= text_area_tag :message, nil, placeholder: "Leave a message", class: "form-control contact-form message-box" %>
+        <%= text_area_tag :message, nil, placeholder: "Leave a message", class: "form-control contact-form message-box", required: true %>
       </div>
       <div class = "form-group">
         <%= submit_tag "Send", class: "btn btn-default" %>
