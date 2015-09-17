@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
     UserMailer.welcome_email(self).deliver
   end
 end
-  
+
  
