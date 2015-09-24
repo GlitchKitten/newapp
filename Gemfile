@@ -63,7 +63,10 @@ gem 'factory_girl_rails', "~>4.0"
 
 group :development do
   gem 'guard'
+  gem 'guard-spork'
 end
 
 gem 'guard-rspec', require: false
+
+gem "spork-rails"
 
