@@ -61,3 +61,9 @@ end
 
 gem 'factory_girl_rails', "~>4.0"
 
+group :development do
+  gem 'guard'
+end
+
+gem 'guard-rspec', require: false
+
