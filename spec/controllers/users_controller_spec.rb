@@ -2,13 +2,13 @@ require 'rails_helper'
   describe UsersController, :type => :controller do
     
     before do
-      @user = User.create!(email: "ahaschenburger@gmail.com", password: "12345678", first_name: "Test")
-      @user2 = User.create!(email: "amberbmulholland@gmail.com", password: "12345678", first_name: "Test")
+      @user = FactoryGirl.create(:user, id: "1")
+      @admin = FactoryGirl.create(:admin, id: "2")
     end
        
       context "No user is logged in" do
         it "redirects to login" do
-          get :show, id: @user.id
+          get :index
           expect(response).to redirect_to(user_session_path)
         end
       end
@@ -28,10 +28,24 @@ require 'rails_helper'
       
       context "User attempts to view other's info" do
         it "redirects to home page" do
-          get :show, id: @user2.id
+          get :show, id: @admin.id
           expect(response).to redirect_to(root_path)
         end
       end
-  end
+    end  
+   
+    describe "GET #show" do
+      before do
+        sign_in @admin
+      end
+      
+      context "Admin is logged in" do
+        it "shows user index" do
+          get :index
+            expect(response).to be_success
+            expect(response).to have_http_status(200)
+        end
+      end
+    end  
     
 end
