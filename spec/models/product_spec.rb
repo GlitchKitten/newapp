@@ -22,7 +22,38 @@ require 'rails_helper'
       it 'product creation is not valid' do
         expect(@product).not_to be_valid
       end
+    end
+    
+    context "product created with non-numerical price" do
+      before do
+        @product = FactoryGirl.build(:product, price: "Text price")
+      end
+      
+      it 'product creation is not valid' do
+        expect(@product).not_to be_valid
+      end
+    end 
+    
+    context "product created with price less than zero" do
+      before do
+        @product = FactoryGirl.build(:product, price: "-1")
+      end
+      
+      it 'product creation is not valid' do
+        expect(@product).not_to be_valid
+      end
     end  
+    
+    context "product created with non-numerical stock" do
+      before do
+        @product = FactoryGirl.build(:product, stock: "Text stock")
+      end
+      
+      it 'product creation is not valid' do
+        expect(@product).not_to be_valid
+      end
+    end  
+     
   end  
             
         

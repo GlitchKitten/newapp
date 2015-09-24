@@ -4,7 +4,7 @@ require 'rails_helper'
   
     context "all user information present" do
       before do 
-        @user = FactoryGirl.create(:user, email: "user@gmail.com") #overrides sequence of emails needed for comment creation
+        @user = FactoryGirl.create(:user, email: "user@gmail.com") #overrides sequenced emails needed for comment trait creation
       end
       
       it "should return all information" do
@@ -17,7 +17,7 @@ require 'rails_helper'
     
     context "user email is not provided" do
       before do
-        @user = FactoryGirl.build(:user, email: "not_an_email")
+        @user = FactoryGirl.build(:user, email: "")
       end
    
       it "should not save the user" do
@@ -27,7 +27,17 @@ require 'rails_helper'
     
     context "user password is not provided" do
       before do
-        @user = FactoryGirl.build(:user, password: "not_valid")
+        @user = FactoryGirl.build(:user, password: "")
+      end
+   
+      it "should not save the user" do
+        expect(@user).not_to be_valid
+      end
+    end 
+    
+    context "user name is not provided" do
+      before do
+        @user = FactoryGirl.build(:user, first_name: "")
       end
    
       it "should not save the user" do
