@@ -22,7 +22,7 @@
 
 <%= form_tag "/payments/create"  %>
   <%= render partial: "shared/stripe_checkout_button" %>
-<%  %>
+<%end%>
 
 <%= render 'comments/all_comments' %>
 <%= will_paginate @comments, :class => "pagination" %>
