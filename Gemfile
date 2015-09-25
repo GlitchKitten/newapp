@@ -70,3 +70,5 @@ gem 'guard-rspec', require: false
 
 gem "spork-rails"
 
+gem 'stripe'
+
