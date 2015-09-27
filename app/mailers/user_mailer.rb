@@ -16,4 +16,11 @@ class UserMailer < ActionMailer::Base
     mail(:to => "#{user.email}", :subject => "Welcome to Litote Clothing")
   end
   
+  def order_email(first_name, email)
+    @first_name = first_name
+    mail(:from => "ahaschenburger@gmail.com", 
+      :to => "#{email}",
+      :subject => "Your Purchase from Litote Clothing")
+	end
+  
 end

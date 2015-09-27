@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     
   post 'static_pages/thank_you'
   
+  post 'payments/create' 
+  
   
 
 
@@ -75,6 +77,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+  
+  resources :payments, only: [:index, :show, :new, :create]
   
   resources :orders, only: [:index, :show, :new, :create]
 end
