@@ -22,9 +22,5 @@ class PaymentsController < ApplicationController
     UserMailer.order_email(@first_name, @email).deliver
     redirect_to products_path
   end
-
-  def payment_params
-    params.require(:payment).permit(:price, :user_id)
-  end
   
 end
