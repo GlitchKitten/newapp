@@ -15,11 +15,11 @@ class PaymentsController < ApplicationController
       body = e.json_body
       err = body[:error]
       flash[:error] = "Unfortunately there was an error processing your payment: #{error[:message]}"
-      redirect_to product_path(product)
+      redirect_to products_path
     end
   
     UserMailer.order_email(@first_name, @email).deliver
-    redirect_to product_path(product)
+    redirect_to products_path
   end
 
   def payment_params
