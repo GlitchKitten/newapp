@@ -1,9 +1,10 @@
 <form action="" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key='pk_test_Wl19S7V1BqL6eE4HNT6VmOhb'
+    data-key="pk_test_Wl19S7V1BqL6eE4HNT6VmOhb"
     data-amount= "<%=(@product.price)*100 %>"
     data-name= "Litote Clothing"
-    data-description= "<%=@product.name%>">
+    data-description= "<%=@product.name%>"
+    data-locale="auto">
   </script>
 </form>
