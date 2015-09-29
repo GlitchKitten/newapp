@@ -1,4 +1,6 @@
 class PaymentsController < ApplicationController
+  def show
+  end
   
   def create
     @product = Product.find(params[:product_id])
@@ -19,7 +21,8 @@ class PaymentsController < ApplicationController
       redirect_to products_path
     end
   
-      redirect_to products_path
+    UserMailer.order_email(@first_name, @email).deliver
+    redirect_to products_path
   end
 
   def show
