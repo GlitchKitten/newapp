@@ -63,5 +63,6 @@
       <p class="alert"><%= alert %></p>
     </div>
     <%= yield %>  
-  </body>    
+  </body> 
+  <script>Stripe.setPublishableKey("<%= Rails.configuration.stripe[:publishable_key] %>");</script>
 </html>
