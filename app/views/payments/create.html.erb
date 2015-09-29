@@ -1,1 +1,5 @@
-<p> Thanks for your purchase! </p>
+
+<div class="order confirmation">
+  <p>Thank you! We have received your payment of &nbsp;<%=number_to_currency(@product.price, unit: "£") %>&nbsp;. Your order will be dispatched within the next few days. </p>
+  <p><%= link_to 'Back to Products', products_path %></p>
+</div>
