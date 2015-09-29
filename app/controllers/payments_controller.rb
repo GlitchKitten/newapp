@@ -11,6 +11,8 @@ class PaymentsController < ApplicationController
         :source => token,
         :description => params[:stripeEmail]
       )
+      flash[:success] = "Payment processed successfully"
+
    
     rescue Stripe::CardError => e
       body = e.json_body
@@ -18,7 +20,8 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately there was an error processing your payment: #{error[:message]}"
       redirect_to products_path
     end
-  
+    
+    
     UserMailer.order_email(@first_name, @email).deliver
     redirect_to products_path
   end
