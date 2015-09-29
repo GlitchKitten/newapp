@@ -1,6 +1,4 @@
 class PaymentsController < ApplicationController
-  def new
-  end
   
   def create
     @product = Product.find(params[:product_id])
