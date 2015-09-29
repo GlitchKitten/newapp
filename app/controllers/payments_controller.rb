@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
     end
   
     UserMailer.order_email(@first_name, @email).deliver
-    
+    redirect_to products_path()
   end
 
   def payment_params
