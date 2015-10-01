@@ -72,3 +72,5 @@ gem "spork-rails"
 
 gem 'stripe'
 
+gem 'byebug'
+
