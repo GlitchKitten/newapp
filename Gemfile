@@ -74,3 +74,5 @@ gem 'stripe'
 
 gem 'byebug'
 
+gem 'brakeman', :require => false
+
