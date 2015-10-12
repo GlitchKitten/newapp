@@ -16,4 +16,12 @@ class UserMailer < ActionMailer::Base
     mail(:to => "#{user.email}", :subject => "Welcome to Litote Clothing")
   end
   
+  def confirmation_mail(user, product)
+    @user = user
+    @product = product
+    mail(:from => 'ahaschenburger@gmail.com',
+      :to => user.email,
+      :subject => "Order Confirmation")
+  end
+  
 end

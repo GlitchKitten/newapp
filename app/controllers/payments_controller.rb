@@ -27,6 +27,7 @@ class PaymentsController < ApplicationController
     end
 
     redirect_to products_path
+    UserMailer.confirmation_mail(@user, @product).deliver
   end
 
   def show
