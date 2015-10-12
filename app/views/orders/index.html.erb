@@ -6,10 +6,8 @@
       <th>Order ID</th>
       <th>Product ID</th>
       <th>Total</th>
-      <th>Actions</th>
     </tr> 
-   <thead> 
-  
+  <thead> 
   <tbody>
     <% current_user.orders.each do |order| %>
       <tr>
@@ -20,6 +18,5 @@
         <td><%= link_to 'Show', order %></td>
       </tr>
     <% end %>
-  </tbody>
-  
+  </tbody>  
 </table>
