@@ -11,7 +11,7 @@
    <thead> 
   
   <tbody>
-    <% @orders.each do |order| %>
+    <% current_user.orders.each do |order| %>
       <tr>
         <td><%= order.user_id %></td>
         <td><%= order.id %></td>

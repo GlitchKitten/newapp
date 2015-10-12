@@ -13,6 +13,6 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Your Orders', orders_path %>
+<%= link_to 'Your Orders', order_path(@user) %>
 <br>
 <%= link_to 'Back', users_path %>
