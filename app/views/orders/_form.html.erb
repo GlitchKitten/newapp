@@ -1,19 +1,7 @@
-<%= form_for(@order) do |f| %>
-
-  <div class="field">
-    <%= f.label :user_id, "User ID Number" %><br>
-    <%= f.text_field :user_id, class: "form_label" %>
-  </div>
-  <div class="field">
-    <%= f.label :product_id, "Product ID Number" %><br>
-    <%= f.text_area :product_id, class: "form_label" %>
-  </div>
-  <div class="field">
-    <%= f.label :total %><br>
-    <%= f.text_field :total, class: "form_label" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  
-<% end %>
+<tr>
+  <td><%= order.id %></td>
+  <td><%= order.user_id %></td>
+  <td><%= order.product_id %></td>
+  <td><%= order.total %></td>
+  <td><%= order.order_id %></td>
+</tr>  

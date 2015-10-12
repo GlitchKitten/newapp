@@ -1,5 +1,5 @@
 <tr>
-  <td><%= image_tag(product.image_url)%></td>
+  <td><%= image_tag(product.image_url, class: "img-zoom", data_zoom_image: "image_tag(product.image_url)")%></td>
   <td>
     <ul>
       <li><strong><%= product.name%></strong></li>

@@ -7,7 +7,7 @@ class Ability
       can :manage, :all
     else
       can :manage, User, id: user.id
-      can :manage, Order, id: user.id
+      can :read, Order, id: user.id
       cannot :destroy, :all
     end
   end
