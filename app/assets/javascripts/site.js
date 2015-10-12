@@ -5,6 +5,9 @@ $(document).on('ready page:load', function(){
     score: function() {
       return $(this).attr('data-score');
     }
-  $('.img-zoom').elevateZoom();
+  });
+  $(".img-zoom").elevateZoom({
+    zoomType : "inner",
+    cursor: "crosshair"
   });
 });

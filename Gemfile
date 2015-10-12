@@ -76,6 +76,8 @@ gem 'byebug'
 
 gem 'brakeman', :require => false
 
+gem 'elevatezoom-rails'
+
 
 
 
