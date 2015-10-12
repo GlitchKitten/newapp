@@ -16,50 +16,101 @@
 </head>
   <body>
     <!--Navigation Bar --> 
-    <nav>
-      <div class = "navbar navbar-header navbar-inverse navbar-fixed-top" role = "navigation">
-        <div class = "container-fluid">
-          <div class = "project">
-            <a href= "#">Amber Mulholland</a>
-          </div>
-          <div class = "navbar-header" id="heading">
-            <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
-              <span class = "sr-only"> Toggle Navigation</span>
-              <span class = "icon-bar"></span>
-              <span class = "icon-bar"></span>
-              <span class = "icon-bar"></span>
-            </button>
+    
+    <% if signed_in? && current_user.admin? %>
+      <nav>
+        <div class = "navbar navbar-header navbar-inverse navbar-fixed-top" role = "navigation">
+          <div class = "container-fluid">
+            <div class = "project">
+              <a href= "#">Amber Mulholland</a>
+            </div>
+            <div class = "navbar-header" id="heading">
+              <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
+                <span class = "sr-only"> Toggle Navigation</span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+              </button>
 
-            <div class = "navbar-collapse navbar-header collapse">
-              <ul class = "nav navbar-nav">
-                <li><%= link_to "Home", static_pages_landing_page_path %></li>
-                <li><%= link_to "About", static_pages_about_path %></li>
-                <li><%= link_to "Contact", static_pages_contact_path %></li>
-                <li><%= link_to "Products", products_path %></li>
-                <li>
-                  <% if user_signed_in? %>
-                    <li>
-                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                    </li>
-                  <% else %>
-                    <li>
-                    <%= link_to('Login', new_user_session_path) %>
-                    </li>
-                  <% end %>
-                </li>
-                <li> 
-                  <%= form_tag("/products", method: "get", id: "search_form") do %>
-                    <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
-                    <%= submit_tag("Search", id: "search_button") %>
-                  <% end %>
-                </li> 
-                </br>
-              </ul>
+              <div class = "navbar-collapse navbar-header collapse">
+                <ul class = "nav navbar-nav">
+                  <li><%= link_to "Home", static_pages_landing_page_path %></li>
+                  <li><%= link_to "About", static_pages_about_path %></li>
+                  <li><%= link_to "Contact", static_pages_contact_path %></li>
+                  <li><%= link_to "Products", products_path %></li>
+                  <li><%= link_to "Users", users_path %></li>
+                  <li><%= link_to "Orders", orders_path %></li>
+                  <li>
+                    <% if user_signed_in? %>
+                      <li>
+                      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                      </li>
+                    <% else %>
+                      <li>
+                      <%= link_to('Login', new_user_session_path) %>
+                      </li>
+                    <% end %>
+                  </li>
+                  <li> 
+                    <%= form_tag("/products", method: "get", id: "search_form") do %>
+                      <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
+                      <%= submit_tag("Search", id: "search_button") %>
+                    <% end %>
+                  </li> 
+                  </br>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </div>  
-     </nav> 
+        </div>  
+       </nav> 
+
+    <%else%>
+      <nav>
+        <div class = "navbar navbar-header navbar-inverse navbar-fixed-top" role = "navigation">
+          <div class = "container-fluid">
+            <div class = "project">
+              <a href= "#">Amber Mulholland</a>
+            </div>
+            <div class = "navbar-header" id="heading">
+              <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
+                <span class = "sr-only"> Toggle Navigation</span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+              </button>
+
+              <div class = "navbar-collapse navbar-header collapse">
+                <ul class = "nav navbar-nav">
+                  <li><%= link_to "Home", static_pages_landing_page_path %></li>
+                  <li><%= link_to "About", static_pages_about_path %></li>
+                  <li><%= link_to "Contact", static_pages_contact_path %></li>
+                  <li><%= link_to "Products", products_path %></li>
+                  <li>
+                    <% if user_signed_in? %>
+                      <li>
+                      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                      </li>
+                    <% else %>
+                      <li>
+                      <%= link_to('Login', new_user_session_path) %>
+                      </li>
+                    <% end %>
+                  </li>
+                  <li> 
+                    <%= form_tag("/products", method: "get", id: "search_form") do %>
+                      <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
+                      <%= submit_tag("Search", id: "search_button") %>
+                    <% end %>
+                  </li> 
+                  </br>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </nav> 
+    <%end%>
     <!--Sign-In/Out Notice--> 
     <div class="notice">   
       <p class="notice"><%= notice %></p>
