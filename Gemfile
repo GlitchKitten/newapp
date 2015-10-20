@@ -78,6 +78,8 @@ gem 'brakeman', :require => false
 
 gem 'elevatezoom-rails'
 
+gem 'dalli'
+
 
 
 
