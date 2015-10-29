@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
       else
         format.html { redirect_to @product, alert: 'Review was not saved.'}
         format.json { render json: @comment.errors, status: :unprocessable_entity}
-        format.js
       end
     end
   end
