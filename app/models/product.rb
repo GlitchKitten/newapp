@@ -8,4 +8,12 @@ class Product < ActiveRecord::Base
   def average_rating
     comments.average(:rating).to_f
   end
+  
+  def number_of_shows
+    $redis.incr("product-shows-#{id}").to_i
+  rescue Exception => ex
+    Rails.logger.error(ex.message)
+    Rails.logger.error(ex.backtrace)
+    0  
+  end  
 end
