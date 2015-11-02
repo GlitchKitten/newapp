@@ -82,6 +82,9 @@ gem 'dalli'
 
 gem 'redis-rails'
 
+gem 'redis'
+
+
 
 
 

@@ -18,6 +18,10 @@
 
 <p>£<%= @product.price %></p>
 
+<p>Number of Product Shows: <%= $redis.incr("number-of-product-shows-#{@product.id}") %> </p>
+
+  <% cache("#{@product.id}-#{@product.updated_at.to_s(:number)}-#{@product.comments.count}") do %>
+  <%end%>
 <p>Average Rating: <div class = "rated" data-score="<%= @product.average_rating %>"></div> </p>
 
 <%= form_tag "/payments/create" do %>
