@@ -301,7 +301,6 @@ DEPENDENCIES
   pg
   rails (= 4.1.11)
   rails_12factor
-  redis
   redis-rails
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
