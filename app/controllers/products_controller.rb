@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   def show 
     @user = current_user
     @comments = @product.comments.all.order("created_at DESC")
-    @comments = Comment.paginate(:page => params[:page], :per_page => 3)
+    @comments = @product.comments.paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new
