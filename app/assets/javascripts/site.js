@@ -8,10 +8,7 @@ function ratings(){
 };
 
 $(document).on('page:change', function(){                   
-  $(".img-zoom").elevateZoom({
-    zoomType : "inner",
-    cursor: "crosshair"
-  });
+  $(".img-zoom").elevateZoom();
   ratings();
 });
  
