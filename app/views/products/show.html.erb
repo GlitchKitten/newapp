@@ -1,37 +1,41 @@
-<p>
-  <%= image_tag(@product.image_url, class: 'img-zoom', width: 350,  data: {'zoom-image' => image_url(@product.image_url)}) %>
-</p>
+<div class = "productshow thumbnail"> 
+  <p>
+    <%= image_tag(@product.image_url, class: 'img-zoom', width: 350,  data: {'zoom-image' => image_url(@product.image_url)}) %>
+  </p>  
+  <div class = "caption">
+    <p>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+    <p>
+      <%= @product.description %>
+    </p>
 
-<p>
-  <%= @product.description %>
-</p>
+    <p> 
+      <strong>Colour:</strong>
+      <%= @product.colour %>
+    </p>
 
-<p> 
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+    <p>£<%= @product.price %></p>
 
-<p>£<%= @product.price %></p>
+    <p>Average Rating: <div class = "rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <%= form_tag "/payments/create" do %>
+      <%= hidden_field_tag :product_id, @product.id %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <%end%>
+  </div>
+</div>
 
-<p>Average Rating: <div class = "rated" data-score="<%= @product.average_rating %>"></div> </p>
-
-<%= form_tag "/payments/create" do %>
-  <%= hidden_field_tag :product_id, @product.id %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<%end%>
-
-<%= render 'comments/all_comments' %>
-<%= will_paginate @comments, :class => "pagination" %>
-<%= render 'comments/new_comment' %>
+<div class = "container comments">
+  <%= render 'comments/all_comments' %>
+  <%= will_paginate @comments, :class => "pagination" %>
+  <%= render 'comments/new_comment' %>
+</div>
 
 <br>
 <%= link_to 'Back', products_path %>
-<br>
+<br>  
 
 <br>
 <% number_of_shows =  @product.number_of_shows %>
