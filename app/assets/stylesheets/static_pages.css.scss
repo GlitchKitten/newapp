@@ -48,7 +48,7 @@ nav {
 }
 
 #search_button:hover{
-  color: #FF3399; 
+  color: #CDDEE8; 
 }
 
 #search_button {
@@ -64,7 +64,7 @@ nav {
 
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  color: #FF3399;
+  color: #CDDEE8;
 }
 
 .nav a {
@@ -94,10 +94,9 @@ nav {
 
 /*Main Content */
 .notice {
-  color: #FF3399;
   font-weight: 600;
   position: absolute;
-  top: 38px;
+  top: 45px;
   width: 100%;
   z-index: 1000;
 }
@@ -145,11 +144,36 @@ h4 {
 }
 
 .contacts a:hover {
-  color: #FF3399;
+  color: black;
+  font-weight: bold;
 }
 
 .contactbtn {
   float: left;
+}
+
+/*Tables*/
+table {		
+  width: 95%;		
+  margin: 2% auto;		
+}		
+		
+tr {		
+	display: block-inline;		
+}		
+		
+th {		
+  text-align: center;		
+  font-size: 2em;		
+  display: block-inline;		
+  line-height: 1.2em;		
+}		
+		
+td {		
+  width: 50%;		
+  border: solid;		
+  border-width: 2px;		
+  padding: 2em;		
 }
 
 
