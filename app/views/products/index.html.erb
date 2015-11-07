@@ -1,34 +1,29 @@
 <h3>Products</h3>
 
-<table>  
-  <tbody>
     <% cache (cache_key_for_products) do %>
     <% Product.all.each do |p| %>
-        <% cache(p) do %>
-        <tr>
-          <td><%= image_tag(p.image_url)%></td>
-          <td>
-            <ul>
-              <li><strong><%= p.name%></strong></li>
-              <li><%= p.description %></li>
-              <li><strong>Colour: </strong><%= p.colour %></li>
-              <li><strong>$<%= p.price %></strong></li>         
-              <li><strong>In stock: </strong><%= p.stock %></li>
-              <br>
-              <li><%= link_to 'More Detail', p %></li>
-              <% if signed_in? && current_user.admin? %>
-                <li><%= link_to 'Edit', edit_product_path(p) %></li>
-                <li><%= link_to 'Destroy', p, :method => :delete, data: {confirm: "Are you sure you want to delete?"}%></li>
-              <% end %>
-            </ul>
-          </td>
-        </tr>
+        <% cache(p) do %>          
+            <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class = "thumbnail">
+                 <%= image_tag(p.image_url)%>
+                <div class = "caption">
+                    <p><strong><%= p.name%></strong></p>
+                    <p><%= p.description %></p>
+                    <p><strong>Colour: </strong><%= p.colour %></p>
+                    <p><strong>$<%= p.price %></strong></p>         
+                    <p><strong>In stock: </strong><%= p.stock %></p>         
+                    <p class = "btn btn-default" role = "button"><%= link_to 'More Detail', p %></p>
+ 
+                    <% if signed_in? && current_user.admin? %>
+                      <p><%= link_to 'Edit', edit_product_path(p) %></p>
+                      <p><%= link_to 'Destroy', p, :method => :delete, data: {confirm: "Are you sure you want to delete?"}%></p>
+                    <% end %> 
+                </div>
+              </div> 
+            </div>  
         <%end%>
       <%end%>
     <%end%>
-  </tbody>
-</table>
-
 <br>
   
 <% if signed_in? && current_user.admin? %>

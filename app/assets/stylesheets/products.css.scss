@@ -2,37 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table {
-  width: 95%;
-  margin: 2% auto;
-}
-
-tr {
-	display: block-inline;
-}
-
-th {
-  text-align: center;
-  font-size: 2em;
-  display: block-inline;
-  line-height: 1.2em;
-}
-
-td {
-  width: 50%;
-  border: solid;
-  border-width: 2px;
-  padding: 2em;
-}
-
 li {
   list-style-type: none;
   padding: .25em;
-}
-
-.btn {
-  float: right;
-  margin-right: 8%;
 }
 
 .pagination {
@@ -62,5 +34,24 @@ li {
    background: none;
    color: black;
 }
+
+.btn {
+  display: inline-block;
+ 
+}
+.btn a:hover {
+  background-color:#CDDEE8;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color:#CDDEE8;
+}
+
+
 
 
