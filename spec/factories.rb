@@ -25,13 +25,19 @@ FactoryGirl.define do
     admin false
   end
   
+  factory :order do
+    product_id '1'
+    user_id '1'
+    total '1'
+  end
+  
   factory :comment do
     user 
     product
     rating
     body "test body"
   end
-  
+   
   factory :product do
     name "Test clothing"
     price  "1"
