@@ -16,7 +16,9 @@
     <div class="carousel-inner" role="listbox">
       <% @featured_product.each do |product| %>
       <div class ="item<%= " active" if product == @featured_product.first %>">
-          <%= image_tag(product.image_url, class: "featured_image ") %>
+        <%= link_to product do %>
+          <%=image_tag(product.image_url, class: "featured_image") %>
+        <%end%>
           <div class="carousel-caption">
             <%= product.name %>
           </div>

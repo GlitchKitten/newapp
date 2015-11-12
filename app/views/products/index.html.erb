@@ -7,7 +7,9 @@
         <% cache(p) do %>          
             <div class="col-sm-6 col-md-4 col-lg-4">
               <div class = "thumbnail">
-                 <%= image_tag(p.image_url)%>
+                 <%= link_to p do %> 
+                   <%= image_tag(p.image_url)%>
+                 <%end%> 
                 <div class = "caption">
                     <p><strong><%= p.name%></strong></p>
                     <p><%= p.description %></p>
