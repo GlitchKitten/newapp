@@ -1,23 +1,24 @@
-<div class = "contact-block col-lg-3 col-md-4 col-sm-12 col-xs-12">
-  <h1> WANT TO SAY HI?</h1>
-  <div class = "contacts">
-  <div class="row">
-    <div class="col-md-12 col-lg-12">
-      <h2><span class = "glyphicon glyphicon-earphone"></h2>
-      <p>07512345678</p>
+<%cache do%>  
+  <div class = "contact-block col-lg-3 col-md-4 col-sm-12 col-xs-12">
+    <h1> WANT TO SAY HI?</h1>
+    <div class = "contacts">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <h2><span class = "glyphicon glyphicon-earphone"></h2>
+          <p>07512345678</p>
+        </div>
+        <div class="col-md-12 col-lg-12">
+          <h2><span class = "glyphicon glyphicon-envelope"></h2>
+          <a href = "mailto:ahaschenburger@gmail.com" style = "text-decoration: none"><p>ahaschenburger@gmail.com</p></a>
+        </div>
+        <div class="col-md-12 col-lg-12">
+          <h2><span class = "glyphicon glyphicon-comment"></h2>
+          <p>amber.haschenburger </p>
+        </div>
+      </div>
     </div>
-    <div class="col-md-12 col-lg-12">
-      <h2><span class = "glyphicon glyphicon-envelope"></h2>
-      <a href = "mailto:ahaschenburger@gmail.com" style = "text-decoration: none"><p>ahaschenburger@gmail.com</p></a>
-    </div>
-    <div class="col-md-12 col-lg-12">
-      <h2><span class = "glyphicon glyphicon-comment"></h2>
-      <p>amber.haschenburger </p>
-    </div>
-  </div>
-</div>
-</div>       
-  
+  </div>       
+<%end%>
 <%= flash[:notice] %>  
             
 <%= form_tag("/static_pages/thank_you") do %>
