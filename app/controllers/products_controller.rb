@@ -5,9 +5,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:q]
-      search_term = params[:q]
-      @products = Product.where("name LIKE ?", "%#{search_term}%" )
+    if params[:search]
+      @products = Product.search(params[:search]).order("created_at DESC") 
     else
       @products = Product.all
     end

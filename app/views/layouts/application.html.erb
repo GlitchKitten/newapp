@@ -99,7 +99,7 @@
                   </li>
                   <li> 
                     <%= form_tag("/products", method: "get", id: "search_form") do %>
-                      <%= text_field_tag(:q, value = nil, options = {:id => "search_bar"}) %>
+                      <%= search_field_tag :search, params[:search], :id => "search_bar" %>
                       <%= submit_tag("Search", id: "search_button") %>
                     <% end %>
                   </li> 

@@ -9,6 +9,10 @@ class Product < ActiveRecord::Base
     comments.average(:rating).to_f
   end
   
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+  end   
+  
   def number_of_shows
     $redis.incr("product-shows-#{id}").to_i
   rescue Exception => ex
